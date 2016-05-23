@@ -1,0 +1,54 @@
+* {
+  /* border: solid red 1px; */
+}
+
+body {
+  background-image: url("blackboard.jpg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#wrapper {
+  position: absolute;
+  width: 90%;
+  padding: 2% 5% 5% 5%;
+}
+
+#calc-body {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding: 1rem;
+  background-color: #eeeeee
+}
+
+#display {
+  border: 1px solid black;
+  text-align: right;
+  height: 2.5rem;
+  margin: .5rem 0;
+  padding: 0 .5rem;
+}
+
+#keypad {
+  width: 100%;
+}
+
+td {
+  width: 25%;
+  padding: 0;
+}
+
+.calc-key {
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  padding: 30% 0;
+}
+
+h2 {
+  text-align: center;
+  margin: 0;
+}
