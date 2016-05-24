@@ -8,7 +8,9 @@
 
   <link href='https://fonts.googleapis.com/css?family=VT323|Nova+Square' rel='stylesheet' type='text/css'>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
   <script src="calcscript.js" async></script>
+
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -18,39 +20,39 @@
     <div id="calc-body">
     <h2>JS Calculator v0.1</h2>
       <div id="display">
-        Display goes here
+        O
       </div>
       <table id="keypad">
         <tbody>
           <tr>
-            <td><div class="calc-key" type="button" value="all-clear">AC</div></td>
-            <td><div class="calc-key" type="button" value="clear-previous">CE</div></td>
-            <td><div class="calc-key" type="button" value="percent">%</div></td>
-            <td><div class="calc-key" type="button" value="divide">/</div></td>
+            <td><div class="calc-key" type="button" id="AC">AC</div></td>
+            <td><div class="calc-key" type="button" id="CE">CE</div></td>
+            <td><div class="calc-key" type="button" id="%">%</div></td>
+            <td><div class="calc-key" type="button" id="/">/</div></td>
           </tr>          
           <tr>
-            <td><div class="calc-key" type="button" value="7">7</div></td>
-            <td><div class="calc-key" type="button" value="8">8</div></td>
-            <td><div class="calc-key" type="button" value="9">9</div></td>
-            <td><div class="calc-key" type="button" value="multiply">*</div></td>
+            <td><div class="calc-key" type="button" id="7">7</div></td>
+            <td><div class="calc-key" type="button" id="8">8</div></td>
+            <td><div class="calc-key" type="button" id="9">9</div></td>
+            <td><div class="calc-key" type="button" id="*">*</div></td>
           </tr>          
           <tr>
-            <td><div class="calc-key" type="button" value="4">4</div></td>
-            <td><div class="calc-key" type="button" value="5">5</div></td>
-            <td><div class="calc-key" type="button" value="6">6</div></td>
-            <td><div class="calc-key" type="button" value="subtract">-</div></td>
+            <td><div class="calc-key" type="button" id="4">4</div></td>
+            <td><div class="calc-key" type="button" id="5">5</div></td>
+            <td><div class="calc-key" type="button" id="6">6</div></td>
+            <td><div class="calc-key" type="button" id="-">-</div></td>
           </tr>          
           <tr>
-            <td><div class="calc-key" type="button" value="1">1</div></td>
-            <td><div class="calc-key" type="button" value="2">2</div></td>
-            <td><div class="calc-key" type="button" value="3">3</div></td>
-            <td><div class="calc-key" type="button" value="add">+</div></td>
+            <td><div class="calc-key" type="button" id="1">1</div></td>
+            <td><div class="calc-key" type="button" id="2">2</div></td>
+            <td><div class="calc-key" type="button" id="3">3</div></td>
+            <td><div class="calc-key" type="button" id="+">+</div></td>
           </tr>          
           <tr>
-            <td><div class="calc-key" type="button" value="decimal">.</div></td>
-            <td><div class="calc-key" type="button" value="0">0</div></td>
-            <td><div class="calc-key" type="button" value="Ans">Ans</div></td>
-            <td><div class="calc-key" type="button" value="equals">=</div></td>
+            <td><div class="calc-key" type="button" id=".">.</div></td>
+            <td><div class="calc-key" type="button" id="0">0</div></td>
+            <td><div class="calc-key" type="button" id="Ans">Ans</div></td>
+            <td><div class="calc-key" type="button" id="=">=</div></td>
           </tr>
         </tbody>
       </table>
