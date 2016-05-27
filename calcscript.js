@@ -15,7 +15,6 @@
 var toDisplay = "";
 
 var updateDisplay = function () {
-  console.log(this.value);
   var id = this.id;
   if (id == "AC") {
     toDisplay = "0"

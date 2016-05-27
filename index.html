@@ -9,7 +9,7 @@
   <link href='https://fonts.googleapis.com/css?family=VT323|Nova+Square' rel='stylesheet' type='text/css'>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <script src="calcscript.js" async></script>
+  <script src="altscript.js" async></script>
 
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,34 +25,34 @@
       <table id="keypad">
         <tbody>
           <tr>
-            <td><div class="calc-key" type="button" id="AC">AC</div></td>
-            <td><div class="calc-key" type="button" id="CE">CE</div></td>
-            <td><div class="calc-key" type="button" id="%">%</div></td>
-            <td><div class="calc-key" type="button" id="/">/</div></td>
+            <td><input class="calc-key symbol" type="button" value="AC"></td>
+            <td><input class="calc-key symbol" type="button" value="CE"></td>
+            <td><input class="calc-key" type="button" value="%"></td>
+            <td><input class="calc-key symbol" type="button" value="/"></td>
           </tr>          
           <tr>
-            <td><div class="calc-key" type="button" id="7">7</div></td>
-            <td><div class="calc-key" type="button" id="8">8</div></td>
-            <td><div class="calc-key" type="button" id="9">9</div></td>
-            <td><div class="calc-key" type="button" id="*">*</div></td>
+            <td><input class="calc-key number" type="button" value="7"></td>
+            <td><input class="calc-key number" type="submit" value="8"></td>
+            <td><input class="calc-key number" type="button" value="9"></td>
+            <td><input class="calc-key symbol" type="button" value="*"></td>
           </tr>          
           <tr>
-            <td><div class="calc-key" type="button" id="4">4</div></td>
-            <td><div class="calc-key" type="button" id="5">5</div></td>
-            <td><div class="calc-key" type="button" id="6">6</div></td>
-            <td><div class="calc-key" type="button" id="-">-</div></td>
+            <td><input class="calc-key number" type="button" value="4"></td>
+            <td><input class="calc-key number" type="button" value="5"></td>
+            <td><input class="calc-key number" type="button" value="6"></td>
+            <td><input class="calc-key symbol" type="button" value="-"></td>
           </tr>          
           <tr>
-            <td><div class="calc-key" type="button" id="1">1</div></td>
-            <td><div class="calc-key" type="button" id="2">2</div></td>
-            <td><div class="calc-key" type="button" id="3">3</div></td>
-            <td><div class="calc-key" type="button" id="+">+</div></td>
+            <td><input class="calc-key number" type="button" value="1"></td>
+            <td><input class="calc-key number" type="button" value="2"></td>
+            <td><input class="calc-key number" type="button" value="3"></td>
+            <td><input class="calc-key symbol" type="button" value="+"></td>
           </tr>          
           <tr>
-            <td><div class="calc-key" type="button" id=".">.</div></td>
-            <td><div class="calc-key" type="button" id="0">0</div></td>
-            <td><div class="calc-key" type="button" id="Ans">Ans</div></td>
-            <td><div class="calc-key" type="button" id="=">=</div></td>
+            <td><input class="calc-key number" type="button" value="."></td>
+            <td><input class="calc-key number" type="button" value="0"></td>
+            <td><input class="calc-key" type="button" value="Ans"></td>
+            <td><input class="calc-key symbol" type="button" value="="></td>
           </tr>
         </tbody>
       </table>
