@@ -44,5 +44,4 @@ function modifier() {
   calcDisp.innerHTML += this.value;
   holder = "";
   }
-  console.log(storeVal);
 }
