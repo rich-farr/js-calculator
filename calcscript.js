@@ -1,43 +1,48 @@
-// var toDisplay = "";
+var holder = ""
+var storeVal = [];
+var calcDisp = document.getElementById("display");
 
-// var test = $(".calc-key").click(function () {
-//   var id = this.id;
-//   toDisplay += id;
-//   document.getElementById("display").innerHTML = toDisplay;
-// toDisplay = Number(toDisplay);
-// console.log(toDisplay);
-// console.log(typeof(toDisplay));
-// return toDisplay;
-// });
+$(".calc-key.number").click(buildNum);
+$(".calc-key.symbol").click(modifier);
 
-// console.log(test);
+//Takes num keypresses and builds initNum; displays string on calc screen.
+function buildNum() {
+  holder += this.value;
+  calcDisp.innerHTML = holder;
+}
 
-var toDisplay = "";
-
-var updateDisplay = function () {
-  var id = this.id;
-  if (id == "AC") {
-    toDisplay = "0"
+//Appends display with symbol; turns holder into an integer and stores in storeVal, then resets holder.
+function modifier() {
+  if (this.value === '=') {
+    storeVal.push(holder);
+    var calc = storeVal.join(" ");
+    total = eval(calc);
+    calcDisp.innerHTML = total;
+    storeVal = [];
+    holder = String(total);
   }
-  else if (id == "CE") {
-    if (toDisplay === 0 || toDisplay.length === 1) {
-      toDisplay = "0"
+
+  if (this.value === 'AC') {
+    holder = "";
+    storeVal = [];
+    calcDisp.innerHTML = "0";
+  }
+
+  if (this.value === 'CE') {
+    if (calcDisp.innerHTML === '0' || calcDisp.innerHTML.length === 1) {
+      calcDisp.innerHTML = '0'
+      holder = "";
     } else {
-      toDisplay = toDisplay.substring(0, toDisplay.length - 1);
+      calcDisp.innerHTML = calcDisp.innerHTML.substring(0, calcDisp.innerHTML.length - 1)
+      holder = holder.substring(0, holder.length -1);
     }
   }
-  else {
-    toDisplay += id;
+
+  else if (this.value !== '=' && this.value !== 'AC' && this.value !== 'CE') {
+  storeVal.push(holder);
+  storeVal.push(this.value);
+  calcDisp.innerHTML += this.value;
+  holder = "";
   }
-  document.getElementById("display").innerHTML = toDisplay;
+  console.log(storeVal);
 }
-
-var grabNum = function () {
-  toDisplay = Number(toDisplay);
-  console.log(toDisplay);
-  console.log(typeof(toDisplay));
-  return toDisplay;
-}
-
-$(".calc-key").click(updateDisplay);
-//$("#\=").click(grabNum);
